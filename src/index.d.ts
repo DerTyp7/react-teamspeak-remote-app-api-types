@@ -1,2 +1,2 @@
-export * from "./types/objects";
+export * from "./types/entities";
 export * from "./types/events";

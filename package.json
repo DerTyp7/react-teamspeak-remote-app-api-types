@@ -1,5 +1,5 @@
 {
-	"name": "@types/teamspeak-remote-app-api",
+	"name": "react-teamspeak-remote-app-api-types",
 	"version": "1.0.0",
 	"description": "Types for the TeamSpeak 5/6 Remote App API",
 	"license": "ISC",
