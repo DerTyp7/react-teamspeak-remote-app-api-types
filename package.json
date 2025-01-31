@@ -1,0 +1,24 @@
+{
+	"name": "@types/teamspeak-remote-app-api",
+	"version": "1.0.0",
+	"description": "Types for the TeamSpeak 5/6 Remote App API",
+	"license": "ISC",
+	"type": "commonjs",
+	"types": "src/index.d.ts",
+	"scripts": {
+		"build": "tsc"
+	},
+	"keywords": [
+		"typescript",
+		"types",
+		"definitions"
+	],
+	"author": "DerTyp7",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/DerTyp7/react-teamspeak-remote-app-api-types"
+	},
+	"devDependencies": {
+		"typescript": "^5.7.3"
+	}
+}
