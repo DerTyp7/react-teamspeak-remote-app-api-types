@@ -1,6 +1,6 @@
-import { ChannelProperties, ClientProperties, Invoker } from "../index";
+import { IChannelProperties, IClientProperties, IInvoker } from "../index";
 
-export interface LogEvent {
+export interface ILogEvent {
   type: string;
   payload: {
     channel: string;
@@ -12,7 +12,7 @@ export interface LogEvent {
   };
 }
 
-export interface TalkStatusChangedEvent {
+export interface ITalkStatusChangedEvent {
   type: string;
   payload: {
     clientId: number;
@@ -22,16 +22,16 @@ export interface TalkStatusChangedEvent {
   };
 }
 
-export interface ChannelPropertiesUpdatedEvent {
+export interface IChannelPropertiesUpdatedEvent {
   type: string;
   payload: {
     channelId: string;
     connectionId: number;
-    properties: ChannelProperties;
+    properties: IChannelProperties;
   };
 }
 
-export interface ClientMovedEvent {
+export interface IClientMovedEvent {
   type: string;
   payload: {
     clientId: number;
@@ -39,30 +39,30 @@ export interface ClientMovedEvent {
     hotReload: boolean;
     newChannelId: string;
     oldChannelId: string;
-    properties: ClientProperties;
+    properties: IClientProperties;
   };
 }
 
-export interface ChannelEditedEvent {
+export interface IChannelEditedEvent {
   type: string;
   payload: {
     channelId: string;
     connectionId: number;
-    invoker: Invoker;
-    properties: ChannelProperties;
+    invoker: IInvoker;
+    properties: IChannelProperties;
   };
 }
 
-export interface ClientPropertiesUpdatedEvent {
+export interface IClientPropertiesUpdatedEvent {
   type: string;
   payload: {
     clientId: number;
     connectionId: number;
-    properties: ClientProperties;
+    properties: IClientProperties;
   };
 }
 
-export interface ClientSelfPropertiesUpdatedEvent {
+export interface IClientSelfPropertiesUpdatedEvent {
   type: string;
   payload: {
     connectionId: number;

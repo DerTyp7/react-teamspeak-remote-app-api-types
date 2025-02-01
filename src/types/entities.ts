@@ -1,4 +1,4 @@
-export interface AuthOutgoing {
+export interface IAuthOutgoing {
   type: string;
   payload: {
     identifier: string;
@@ -11,23 +11,23 @@ export interface AuthOutgoing {
   };
 }
 
-export interface Channel {
+export interface IChannel {
   id: string;
   order: string;
   parentId: string;
-  properties: ChannelProperties;
+  properties: IChannelProperties;
 }
 
-export interface Connection {
-  channelInfos: ChannelInfos;
+export interface IConnection {
+  channelInfos: IChannelInfos;
   clientId: number;
-  clientInfos: Client[];
+  clientInfos: IClient[];
   id: number;
   status: number;
-  properties: ServerProperties;
+  properties: IServerProperties;
 }
 
-export interface ChannelProperties {
+export interface IChannelProperties {
   bannerGfxUrl: string;
   bannerMode: number;
   codec: number;
@@ -58,20 +58,20 @@ export interface ChannelProperties {
   uniqueIdentifier: string;
 }
 
-export interface ChannelInfos {
-  rootChannels: Channel[];
+export interface IChannelInfos {
+  rootChannels: IChannel[];
   subChannels: {
-    [key: string]: Channel[];
+    [key: string]: IChannel[];
   };
 }
 
-export interface Client {
+export interface IClient {
   channelId: string;
   id: number;
-  properties: ClientProperties;
+  properties: IClientProperties;
 }
 
-export interface ClientProperties {
+export interface IClientProperties {
   away: boolean;
   awayMessage: string;
   badges: string;
@@ -128,7 +128,7 @@ export interface ClientProperties {
   volumeModificator: number;
 }
 
-export interface ServerProperties {
+export interface IServerProperties {
   antiFloodPointsNeededCommandBlock: number;
   antiFloodPointsNeededIpBlock: number;
   antiFloodPointsNeededPluginBlock: number;
@@ -203,7 +203,7 @@ export interface ServerProperties {
   volumeModificator: number;
 }
 
-export interface AuthIncoming {
+export interface IAuthIncoming {
   status: {
     code: number;
     message: string;
@@ -211,11 +211,11 @@ export interface AuthIncoming {
   type: string;
   payload: {
     apiKey: string;
-    connections: Connection[];
+    connections: IConnection[];
   };
 }
 
-export interface Invoker {
+export interface IInvoker {
   id: number;
   name: string;
   uniqueIdentifier: string;
