@@ -1,4 +1,4 @@
-import { IChannelProperties, IClientProperties, IInvoker, IServerProperties } from "../index";
+import { IChannelInfos, IChannelProperties, IClientProperties, IGroup, IInvoker, IServerProperties } from "../index";
 
 export interface ILogEvent {
   type: string;
@@ -77,5 +77,45 @@ export interface IServerPropertiesUpdatedEvent {
   payload: {
     connectionId: number;
     properties: IServerProperties;
+  };
+}
+
+export interface IGroupInfoEvent {
+  type: string;
+  payload: {
+    connectionId: number;
+    data: IGroup[];
+    type: number;
+  };
+}
+
+export interface INeededPermissionsEvent {
+  type: string;
+  payload: {
+    connectionId: number;
+    data: {
+      [key: string]: number;
+    };
+  };
+}
+
+export interface IChannelsEvent {
+  type: string;
+  payload: {
+    connectionId: number;
+    hotReload: boolean;
+    info: IChannelInfos;
+  };
+}
+
+export interface IConnectStatusChangedEvent {
+  type: string;
+  payload: {
+    connectionId: number;
+    status: number;
+    hotReload: boolean;
+    info: null | {
+      clientId: number;
+    }
   };
 }

@@ -220,3 +220,16 @@ export interface IInvoker {
   name: string;
   uniqueIdentifier: string;
 }
+
+export interface IGroup {
+  iconId: number;
+  id: string;
+  name: string;
+  nameMode: number;
+  neededMemberAddPower: number;
+  neededMemberRemovePower: number;
+  neededModifyPower: number;
+  saveDb: boolean;
+  sortId: string;
+  type: number;
+}
