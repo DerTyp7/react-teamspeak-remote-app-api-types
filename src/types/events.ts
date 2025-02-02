@@ -1,4 +1,4 @@
-import { IChannelProperties, IClientProperties, IInvoker } from "../index";
+import { IChannelProperties, IClientProperties, IInvoker, IServerProperties } from "../index";
 
 export interface ILogEvent {
   type: string;
@@ -69,5 +69,13 @@ export interface IClientSelfPropertiesUpdatedEvent {
     flag: string;
     newValue: string;
     oldValue: string;
+  };
+}
+
+export interface IServerPropertiesUpdatedEvent {
+  type: string;
+  payload: {
+    connectionId: number;
+    properties: IServerProperties;
   };
 }
