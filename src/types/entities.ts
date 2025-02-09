@@ -234,15 +234,15 @@ export interface IGroup {
   type: number;
 }
 
-export interface IConnectionStatus {
+export interface IConnectStatus {
   connectionId: number;
   error: string;
   hotReload: boolean;
-  info?: IConnectionStatusInfo;
+  info?: IConnectStatusInfo;
   status: number;
 }
 
-export interface IConnectionStatusInfo {
+export interface IConnectStatusInfo {
   clientId: number;
   serverName: string;
   serverUid: string;
