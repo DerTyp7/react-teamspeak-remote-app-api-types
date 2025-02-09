@@ -244,6 +244,6 @@ export interface IConnectStatus {
 
 export interface IConnectStatusInfo {
   clientId: number;
-  serverName: string;
-  serverUid: string;
+  serverName?: string;
+  serverUid?: string;
 }
