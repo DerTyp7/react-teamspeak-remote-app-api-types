@@ -1,4 +1,4 @@
-import { IChannelInfos, IChannelProperties, IClientProperties, IGroup, IInvoker, IServerProperties } from "../index";
+import { IChannelInfos, IChannelProperties, IClientProperties, IConnectionStatus, IGroup, IInvoker, IServerProperties } from "../index";
 
 export interface ILogEvent {
   type: string;
@@ -110,12 +110,5 @@ export interface IChannelsEvent {
 
 export interface IConnectStatusChangedEvent {
   type: string;
-  payload: {
-    connectionId: number;
-    status: number;
-    hotReload: boolean;
-    info: null | {
-      clientId: number;
-    }
-  };
+  payload: IConnectionStatus;
 }

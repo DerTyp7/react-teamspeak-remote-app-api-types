@@ -233,3 +233,15 @@ export interface IGroup {
   sortId: string;
   type: number;
 }
+
+export interface IConnectionStatus {
+  connectionId: number;
+  error: string;
+  hotReload: boolean;
+  info?: {
+    clientId: number;
+    serverName: string;
+    serverUid: string;
+  }
+  status: number;
+}
