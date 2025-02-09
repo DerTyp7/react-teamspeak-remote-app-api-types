@@ -238,10 +238,12 @@ export interface IConnectionStatus {
   connectionId: number;
   error: string;
   hotReload: boolean;
-  info?: {
-    clientId: number;
-    serverName: string;
-    serverUid: string;
-  }
+  info?: IConnectionStatusInfo;
   status: number;
+}
+
+export interface IConnectionStatusInfo {
+  clientId: number;
+  serverName: string;
+  serverUid: string;
 }
